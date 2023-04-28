@@ -7,5 +7,6 @@ import robotsTxt from "astro-robots-txt";
 
 // https://astro.build/config
 export default defineConfig({
+  site: 'https://healthblogklert.vercel.app/',
   integrations: [tailwind(), sitemap(), compress(), robotsTxt()]
 });
