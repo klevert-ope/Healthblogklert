@@ -25,12 +25,10 @@ const { title } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body class="fade-in">
+	<body>
 		<Header />
 		<slot/>
-		<section class=" mt-20 mb-10">
-			<Footer/>
-		</section>
+		<Footer/>
 	</body>
 </html>
 
@@ -49,19 +47,10 @@ const { title } = Astro.props;
 		font-family: 'Supreme';
 		src: url('/fonts/Supreme-Variable.woff2') format('woff2');
 	}
-	.fade-in {
-      opacity: 0;
-      transition: opacity 3s ease-in-out;
-    }
-
-    .fade-in.active {
-      opacity: 1;
-    }
 </style>
 
-<script src="/src/js/fadein.js"></script>
 
-
+<script src="/src/js/motion.js"></script>
 
 
   
