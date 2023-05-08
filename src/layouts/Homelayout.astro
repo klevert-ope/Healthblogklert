@@ -24,12 +24,6 @@ const { title } = Astro.props;
 		<meta name="theme-color" content="#929cfb">
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
-		<style is:global>
-			@font-face {
-			  font-family: 'Supreme';
-			  src: url('/fonts/Supreme-Variable.woff2') format('woff2');
-			}
-		</style>
 	</head>
 	<body class="fade-in">
 		<Header />
@@ -50,6 +44,10 @@ const { title } = Astro.props;
 		transition: all 0.3s ease;
 		color: #111;
 		background-color: #929cfb;
+	}
+	@font-face {
+		font-family: 'Supreme';
+		src: url('/fonts/Supreme-Variable.woff2') format('woff2');
 	}
 	.fade-in {
       opacity: 0;
