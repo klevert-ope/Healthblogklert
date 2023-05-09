@@ -34,7 +34,7 @@ gsap.set(elements, { y: 10, opacity: 0});
 elements.forEach(el => {
   gsap.to(el, {
     y: 0,
-    duration: 2.5,
+    duration: 4,
     opacity: 1,
     ease: 'power2',
     scrollTrigger: {
