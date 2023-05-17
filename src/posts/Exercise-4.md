@@ -1,7 +1,7 @@
 ---
 title: "Stretching Before and After Exercise"
 slug: "Exercise-4"
-excerpt: Stretching is an essential part of any exercise routine. It helps prepare the body for physical activity, reduces the risk of injury, and can help improve flexibility and range of motion. 
+excerpt: Stretching is an essential part of any exercise routine. It helps prepare the body for physical activity, reduces the risk of injury, and can help improve flexibility and range of motion.
 hero: "/images/F2 (12).jpg"
 tags: ["Exercise"]
 ---
