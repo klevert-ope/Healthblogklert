@@ -54,7 +54,7 @@ You can customize Healthblogklert to suit your specific needs. Consider the foll
 
 - **Content**: Replace the sample blog posts with your own health-related articles. Update the markdown files located in the `src/posts` directory to provide valuable and engaging content.
 
-- **Styling**: Modify the tailwindCSS styles to match your branding and design preferences. The stylesheet files can be found in the components.
+- **Styling**: Modify the TailwindCSS styles to match your branding and design preferences. The style files can be found in the components.
 
 - **Animations**: Experiment with different animations and transitions using Gsap and the Split-Type npm package. Refer to the Gsap documentation ([https://greensock.com/docs/](https://greensock.com/docs/)) and the Split-Type documentation for guidance on creating captivating text effects.
 
