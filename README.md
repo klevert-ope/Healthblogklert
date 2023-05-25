@@ -68,4 +68,4 @@ Healthblogklert is licensed under the [MIT License](https://github.com/klevert-o
 - Gsap - [https://greensock.com/](https://greensock.com/)
 - Split-Type Npm Package - [https://www.npmjs.com/package/split-type](https://www.npmjs.com/package/split-type)
 
-Thank you for using Healthblogklert! We hope it serves as a valuable resource for creating engaging and informative health-related blog content.
+Thank you for using Healthblogklert! I hope it serves as a valuable resource for creating engaging and informative health-related blog content.
