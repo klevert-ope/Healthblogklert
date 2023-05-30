@@ -1,4 +1,4 @@
-<section class="mt-10">
+<section class="my-28">
   <div id="featuredtitle">
     <h1 class="reveal font-Supreme font-extrabold text-3xl text-center mb-2">
       FEATURED
@@ -38,17 +38,13 @@
 </section>
 
 <style>
-  .hide-scroll::-webkit-scrollbar {
-    display: none;
-  }
-
-  .hide-scroll {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-    overflow: -moz-scrollbars-none;
-  }
   img {
     max-height: 350px;
     border: 2px solid black;
+  }
+  .hide-scroll {
+    scroll-behavior: smooth; /* Enable smooth scrolling */
+    overflow-y: hidden; /* Hide vertical scrollbar */
+    scroll-snap-type: x mandatory; /* Snap horizontally */
   }
 </style>

@@ -4,7 +4,9 @@ const posts = await Astro.glob("../posts/*.md");
 
 <section class="page-content mt-10">
   <div id="blogtitle">
-    <h1 class="blogtitle font-Supreme font-extrabold text-3xl text-center mb-1">
+    <h1
+      class="blogtitle font-Supreme font-extrabold text-3xl text-center mb-1 opacity-0"
+    >
       BLOG
     </h1>
   </div>
@@ -13,7 +15,7 @@ const posts = await Astro.glob("../posts/*.md");
       <div id="blogdisplay">
         {
           posts.map((post) => (
-            <div class=" reveal card">
+            <div class=" reveal card opacity-0">
               <img src={post.frontmatter.hero} />
               <h3 class=" font-Supreme font-bold text-base text-red-900 underline">
                 {post.frontmatter.title}

@@ -13,42 +13,59 @@ gsap.registerPlugin(
 );
 
 //header motion
-gsap.from(".logo", { opacity: 0, x: -10, duration: 4, ease: "power2" });
-gsap.from(".navigation1", {
-  opacity: 0,
-  x: -10,
-  duration: 4.5,
-  ease: "power2",
-});
-gsap.from(".navigation2", { opacity: 0, x: -10, duration: 5, ease: "power2" });
+gsap.fromTo(
+  ".logo",
+  { opacity: 0, x: -10 },
+  { opacity: 1, x: 0, duration: 2, ease: "circ.in" }
+);
+gsap.fromTo(
+  ".navigation1",
+  { opacity: 0, x: -10 },
+  { opacity: 1, x: 0, duration: 2.5, ease: "circ.in" }
+);
+gsap.fromTo(
+  ".navigation2",
+  { opacity: 0, x: -10 },
+  { opacity: 1, x: 0, duration: 2.5, ease: "circ.in" }
+);
 
 //hero text motion
 const text = new SplitType("#introhero");
-gsap.from(".line", {
-  y: -10,
-  stagger: 0.5,
-  ease: "elastic.out(1, 0.5)",
-  opacity: 0,
-});
 
-gsap.from(".blogtitle", { opacity: 0, y: 10, duration: 5, ease: "power2" });
+gsap.fromTo(
+  ".line",
+  { opacity: 0, y: -10 },
+  {
+    y: 0,
+    stagger: 0.5,
+    ease: "circ.in",
+    opacity: 1,
+  }
+);
+
+gsap.fromTo(
+  ".blogtitle",
+  { opacity: 0, y: 10 },
+  { opacity: 1, y: 0, duration: 3, ease: "circ.in" }
+);
 
 // select elements to reveal
 const elements = document.querySelectorAll(".reveal");
 
-// set initial y position below viewport
-gsap.set(elements, { y: 10, opacity: 0 });
-
 // reveal elements when they come into view
 elements.forEach((el) => {
-  gsap.to(el, {
-    y: 0,
-    duration: 4,
-    opacity: 1,
-    ease: "power2",
-    scrollTrigger: {
-      trigger: el,
-      start: "top 90%",
-    },
-  });
+  gsap.fromTo(
+    el,
+    { y: 50, opacity: 0 },
+    {
+      y: 0,
+      duration: 1.5,
+      opacity: 1,
+      ease: "circ.in",
+      scrollTrigger: {
+        trigger: el,
+        start: "top 95%",
+      },
+    }
+  );
 });
