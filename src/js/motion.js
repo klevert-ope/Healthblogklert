@@ -31,6 +31,7 @@ gsap.fromTo(
 
 //hero text motion
 const text = new SplitType("#introhero");
+gsap.fromTo("#introhero", { opacity: 0 }, { opacity: 1 });
 
 gsap.fromTo(
   ".line",
