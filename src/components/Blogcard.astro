@@ -23,11 +23,11 @@ const posts = await Astro.glob("../posts/*.md");
               <p class=" font-Supreme font-normal text-sm">
                 {post.frontmatter.excerpt}
               </p>
-              <button id="readmore" class=" mt-2 font-Supreme text-xs">
-                <span>
-                  <a href={`/${post.frontmatter.slug}`}>Read More</a>
-                </span>
-              </button>
+              <a class=" mt-2 " href={`/${post.frontmatter.slug}`}>
+                <button id="readmore" class=" font-Supreme text-xs">
+                  <span>Read More</span>
+                </button>
+              </a>
             </div>
           ))
         }
