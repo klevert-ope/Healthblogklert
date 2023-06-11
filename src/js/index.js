@@ -1,16 +1,8 @@
 import SplitType from "split-type";
 import { gsap } from "gsap";
-import { ExpoScaleEase, RoughEase, SlowMo } from "gsap/EasePack";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 
-gsap.registerPlugin(
-  ScrollTrigger,
-  ScrollToPlugin,
-  ExpoScaleEase,
-  RoughEase,
-  SlowMo
-);
+gsap.registerPlugin(ScrollTrigger);
 
 //header motion
 gsap.fromTo(
@@ -57,7 +49,7 @@ const elements = document.querySelectorAll(".reveal");
 elements.forEach((el) => {
   gsap.fromTo(
     el,
-    { y: 50, opacity: 0 },
+    { y: 20, opacity: 0 },
     {
       y: 0,
       duration: 1.5,
@@ -70,3 +62,34 @@ elements.forEach((el) => {
     }
   );
 });
+
+const buttons = document.querySelectorAll(".vibrate");
+
+buttons.forEach((button) => {
+  button.addEventListener("click", () => {
+    if ("vibrate" in window.navigator) {
+      window.navigator.vibrate(8); // Vibrate for 6ms
+    }
+  });
+});
+
+function limitExcerptCharacters() {
+  const excerptElements = document.getElementsByClassName("excerpt");
+  Array.from(excerptElements).forEach(function (element) {
+    const excerptText = element.textContent;
+    const maxCharacters = 120;
+    const limitedText = truncateText(excerptText, maxCharacters);
+    element.textContent = limitedText;
+  });
+}
+
+function truncateText(text, maxLength) {
+  if (text.length > maxLength) {
+    return text.slice(0, maxLength) + "...";
+  } else {
+    return text;
+  }
+}
+
+// Call the function when the page loads
+window.onload = limitExcerptCharacters;

@@ -15,19 +15,21 @@ const posts = await Astro.glob("../posts/*.md");
       <div id="blogdisplay">
         {
           posts.map((post) => (
-            <div class=" reveal card opacity-0">
+            <div class=" reveal card leading-7 opacity-0">
               <img src={post.frontmatter.hero} />
               <h3 class=" font-Supreme font-bold text-base text-red-900 underline">
                 {post.frontmatter.title}
               </h3>
-              <p class=" font-Supreme font-normal text-sm">
+              <p class=" excerpt font-Supreme font-normal text-sm">
                 {post.frontmatter.excerpt}
               </p>
-              <a class=" mt-2 " href={`/${post.frontmatter.slug}`}>
-                <button id="readmore" class=" font-Supreme text-xs">
-                  <span>Read More</span>
-                </button>
-              </a>
+              <div class=" flex justify-end font-Supreme text-xs my-2 ">
+                <a href={`/${post.frontmatter.slug}`}>
+                  <button id="readmore" class=" vibrate font-Supreme text-xs">
+                    <span>Read More</span>
+                  </button>
+                </a>
+              </div>
             </div>
           ))
         }
@@ -47,7 +49,7 @@ const posts = await Astro.glob("../posts/*.md");
     grid-template-columns: repeat(9, 1fr);
   }
   #blogp {
-    grid-column: 3/8;
+    grid-column: 2/9;
   }
   @media (max-width: 1080px) {
     #blogp {
@@ -56,7 +58,7 @@ const posts = await Astro.glob("../posts/*.md");
   }
   #blogdisplay {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 10px;
   }
   #readmore {

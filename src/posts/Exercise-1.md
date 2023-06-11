@@ -1,7 +1,7 @@
 ---
 title: "Regular Exercise for Overall Fitness and Health"
 slug: "Exercise-1"
-excerpt: Regular exercise has numerous benefits for our overall fitness and health. Exercise can help to reduce the risk of     chronic diseases such as diabetes, heart disease, and some types of cancer.
+excerpt: Regular exercise has numerous benefits for our overall fitness and health. Exercise can help to reduce the risk of chronic diseases such as diabetes, heart disease, and some types of cancer. Additionally, exercise can help to improve mental health, reduce stress levels, and increase overall well-being.
 hero: "/images/F2 (1).jpg"
 tags: ["Exercise"]
 ---
