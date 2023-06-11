@@ -17,15 +17,15 @@ const posts = await Astro.glob("../posts/*.md");
           posts.map((post) => (
             <div class=" reveal card leading-7 opacity-0">
               <img src={post.frontmatter.hero} />
-              <h3 class=" font-Supreme font-bold text-base text-red-900 underline">
+              <h3 class=" font-Supreme font-bold text-lg text-red-900 underline">
                 {post.frontmatter.title}
               </h3>
-              <p class=" excerpt font-Supreme font-normal text-sm">
+              <p class=" excerpt font-Supreme font-normal text-base">
                 {post.frontmatter.excerpt}
               </p>
-              <div class=" flex justify-end font-Supreme text-xs my-2 ">
+              <div class=" flex justify-end  my-2 ">
                 <a href={`/${post.frontmatter.slug}`}>
-                  <button id="readmore" class=" vibrate font-Supreme text-xs">
+                  <button id="readmore" class=" vibrate font-Supreme text-sm">
                     <span>Read More</span>
                   </button>
                 </a>
