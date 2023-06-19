@@ -52,7 +52,7 @@ elements.forEach((el) => {
     { y: 10, opacity: 0 },
     {
       y: 0,
-      duration: 1,
+      duration: 0.5,
       opacity: 1,
       ease: "circ.in",
       scrollTrigger: {
@@ -60,7 +60,7 @@ elements.forEach((el) => {
         preventOverlaps: true,
         scrub: true,
         trigger: el,
-        start: "top 95%",
+        start: "top 98%",
         end: "top 70%",
       },
     }
