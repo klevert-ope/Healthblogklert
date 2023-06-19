@@ -58,7 +58,6 @@ elements.forEach((el) => {
       scrollTrigger: {
         fastScrollEnd: true,
         preventOverlaps: true,
-        scrub: true,
         trigger: el,
         start: "top 98%",
         end: "top 70%",
