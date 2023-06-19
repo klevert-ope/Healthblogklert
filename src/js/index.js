@@ -49,15 +49,19 @@ const elements = document.querySelectorAll(".reveal");
 elements.forEach((el) => {
   gsap.fromTo(
     el,
-    { y: 20, opacity: 0 },
+    { y: 10, opacity: 0 },
     {
       y: 0,
-      duration: 1.5,
+      duration: 1,
       opacity: 1,
       ease: "circ.in",
       scrollTrigger: {
+        fastScrollEnd: true,
+        preventOverlaps: true,
+        scrub: true,
         trigger: el,
         start: "top 95%",
+        end: "top 70%",
       },
     }
   );
