@@ -59,7 +59,7 @@ elements.forEach((el) => {
         fastScrollEnd: true,
         preventOverlaps: true,
         trigger: el,
-        start: "top 98%",
+        start: "top 95%",
         end: "top 70%",
       },
     }
