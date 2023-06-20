@@ -1,8 +1,5 @@
 import SplitType from "split-type";
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-gsap.registerPlugin(ScrollTrigger);
 
 //header motion
 gsap.fromTo(
@@ -52,16 +49,9 @@ elements.forEach((el) => {
     { y: 10, opacity: 0 },
     {
       y: 0,
-      duration: 0.5,
+      duration: 3.5,
       opacity: 1,
       ease: "circ.in",
-      scrollTrigger: {
-        fastScrollEnd: true,
-        preventOverlaps: true,
-        trigger: el,
-        start: "top 95%",
-        end: "top 70%",
-      },
     }
   );
 });
